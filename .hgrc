@@ -1,0 +1,24 @@
+[ui]
+username = Robin Baumgartner <robin@baumgartners.ch>
+ssh = ssh -C
+editor = vim
+merge = vimdiff
+
+[extensions]
+fetch =
+mq =
+record =
+rebase =
+graphlog =
+color =
+purge =
+hgnested =
+hgsubversion =
+
+[hostfingerprints]
+bitbucket.org = 24:9c:45:8b:9c:aa:ba:55:4e:01:6d:58:ff:e4:28:7d:2a:14:ae:3b
+hg.openworkplace.ch = 20:11:77:4b:12:7c:3a:07:41:fc:2c:ae:a3:2f:20:f0:42:66:c5:04
+
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d $base $local $output $other +close +close

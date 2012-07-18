@@ -1,0 +1,18 @@
+"1.0b6 (created: 2011/03/09 09:25:18)
+
+loadplugins '\.(js|penta)$'
+group user
+highlight Hint font: bold 12px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 3px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .8); color: black; text-transform: uppercase;
+highlight StatusLineNormal background: #3C3B37; color: #ffffff;
+map -modes=n,v <C-b> :emenu<Space>View.Sidebar.Bookmarks<Return>
+set autocomplete=
+set guioptions=rs
+set hintkeys=abcdefghijklmnopqrstuvwxyz
+set! browser.tabs.closeWindowWithLastTab=false
+
+inoremap <C-a>      <pass>
+inoremap <C-c>      <pass>
+inoremap <C-v>      <pass>
+inoremap <C-x>      <pass>
+
+" vim: set ft=pentadactyl:
