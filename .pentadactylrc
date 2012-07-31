@@ -10,9 +10,9 @@ set guioptions=rs
 set hintkeys=abcdefghijklmnopqrstuvwxyz
 set! browser.tabs.closeWindowWithLastTab=false
 
-inoremap <C-a>      <pass>
-inoremap <C-c>      <pass>
-inoremap <C-v>      <pass>
-inoremap <C-x>      <pass>
+imap <C-a>      <pass>
+imap <C-c>      <pass>
+imap <C-v>      <pass>
+imap <C-x>      <pass>
 
 " vim: set ft=pentadactyl:
