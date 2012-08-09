@@ -6,3 +6,4 @@ xmonad.errors
 xmonad.hi
 xmonad.o
 .vim/.netrwhist
+.oh-my-zsh/cache
