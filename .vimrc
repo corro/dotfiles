@@ -144,4 +144,4 @@ imap <Tab> <Plug>IMAP_JumpForward
 nmap <Tab> <Plug>IMAP_JumpForward
 
 " CtrlP
-nmap e :CtrlP<cr>
+let g:ctrlp_map = 'e'
