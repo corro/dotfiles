@@ -145,3 +145,6 @@ nmap <Tab> <Plug>IMAP_JumpForward
 
 " CtrlP
 let g:ctrlp_map = 'e'
+
+" Ignore binary files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.pyc
