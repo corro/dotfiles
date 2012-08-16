@@ -142,3 +142,6 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 imap <Tab> <Plug>IMAP_JumpForward
 nmap <Tab> <Plug>IMAP_JumpForward
+
+" CtrlP
+nmap e :CtrlP<cr>
