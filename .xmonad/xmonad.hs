@@ -22,7 +22,7 @@ import qualified Data.Map as M
 myTerminal = "terminal"
 
 myWorkSpaces = ["1:web", "2:file", "3:coding", "4:console", "5:media",
-                "6:chat", "7", "8", "9" ]
+                "6:chat", "7", "8", "9:mail" ]
 
 myLayout = showWName $ avoidStruts $ smartBorders $ perWS
     where
@@ -32,6 +32,7 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
                 onWorkspace "4:console" myConsole  $
                 onWorkspace "5:media"   fullFirst  $
                 onWorkspace "6:chat"    myConsole  $
+                onWorkspace "9:mail"    myMail     $
                                         tallFirst
         tallFirst = myTall ||| Mirror myTall ||| Full
         fullFirst = Full ||| myTall ||| Mirror myTall
@@ -39,6 +40,7 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
         myCoding = FixedColumn 1 20 84 10
         myConsole = Grid ||| myTall ||| Mirror myTall
         myFile   = Mirror Grid
+        myMail = Tall 1 0.03 0.5
 
 myLayoutHook = dwmStyle shrinkText defaultTheme myLayout
 
