@@ -13,6 +13,8 @@ import XMonad.Layout.DwmStyle
 import XMonad.Layout.NoBorders
 import XMonad.Layout.FixedColumn
 import XMonad.Layout.WorkspaceDir
+import XMonad.Layout.IM
+import XMonad.Layout.Reflect
 import XMonad.Util.Replace
 import XMonad.Actions.SpawnOn
 import XMonad.Hooks.ICCCMFocus
@@ -31,16 +33,17 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
                 onWorkspace "3:coding"  myCoding   $
                 onWorkspace "4:console" myConsole  $
                 onWorkspace "5:media"   fullFirst  $
-                onWorkspace "6:chat"    myConsole  $
+                onWorkspace "6:chat"    myChat     $
                 onWorkspace "9:mail"    myMail     $
                                         tallFirst
         tallFirst = myTall ||| Mirror myTall ||| Full
         fullFirst = Full ||| myTall ||| Mirror myTall
-        myTall = Tall 1 0.03 0.7
-        myCoding = FixedColumn 1 20 84 10
+        myTall    = Tall 1 0.03 0.7
+        myCoding  = FixedColumn 1 20 84 10
         myConsole = Grid ||| myTall ||| Mirror myTall
-        myFile   = Mirror Grid
-        myMail = Tall 1 0.03 0.5
+        myFile    = Mirror Grid
+        myMail    = Tall 1 0.03 0.5
+        myChat    = withIM (18/100) (Role "buddy_list") Grid
 
 myLayoutHook = dwmStyle shrinkText defaultTheme myLayout
 
@@ -51,6 +54,7 @@ myManageHook = composeAll
     , className =? "Vlc"             --> shiftView "5:media"
     , className =? "Clementine"      --> shiftView "5:media"
     --, className =? "Evince"          --> shiftView "5:media"
+    , className =? "Pidgin"          --> shiftView "6:chat"
     , className =? "Xfrun4"          --> doCenterFloat
     , className =? "Speedcrunch"     --> doCenterFloat
     , className =? "Gimp"            --> doFloat
