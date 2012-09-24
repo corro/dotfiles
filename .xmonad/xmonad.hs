@@ -24,7 +24,7 @@ import qualified Data.Map as M
 myTerminal = "terminal"
 
 myWorkSpaces = ["1:web", "2:file", "3:coding", "4:console", "5:media",
-                "6:chat", "7", "8", "9:mail" ]
+                "6", "7", "8:chat", "9:mail" ]
 
 myLayout = showWName $ avoidStruts $ smartBorders $ perWS
     where
@@ -33,7 +33,7 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
                 onWorkspace "3:coding"  myCoding   $
                 onWorkspace "4:console" myConsole  $
                 onWorkspace "5:media"   fullFirst  $
-                onWorkspace "6:chat"    myChat     $
+                onWorkspace "8:chat"    myChat     $
                 onWorkspace "9:mail"    myMail     $
                                         tallFirst
         tallFirst = myTall ||| Mirror myTall ||| Full
@@ -47,14 +47,14 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
 
 myLayoutHook = dwmStyle shrinkText defaultTheme myLayout
 
-myLogHook = fadeInactiveLogHook 0.9
+myLogHook = fadeInactiveLogHook 0.93
 
 myManageHook = composeAll
     [ className =? "Firefox"         --> shiftView "1:web"
     , className =? "Vlc"             --> shiftView "5:media"
     , className =? "Clementine"      --> shiftView "5:media"
     --, className =? "Evince"          --> shiftView "5:media"
-    , className =? "Pidgin"          --> shiftView "6:chat"
+    , className =? "Pidgin"          --> shiftView "8:chat"
     , className =? "Xfrun4"          --> doCenterFloat
     , className =? "Speedcrunch"     --> doCenterFloat
     , className =? "Gimp"            --> doFloat
@@ -79,6 +79,7 @@ main = do
       terminal = myTerminal
     , normalBorderColor = "#000000"
     , focusedBorderColor = "#ff0000"
+    , borderWidth = 2
     , workspaces  = myWorkSpaces
     , manageHook = myManageHook
     , layoutHook = myLayoutHook
