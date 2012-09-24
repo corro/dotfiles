@@ -69,11 +69,6 @@ myManageHook = composeAll
     where
         shiftView = doF . liftM2 (.) W.greedyView W.shift
 
-{-myKeys x  = M.union (keys defaultConfig x) (M.fromList (customKeys x))-}
-    {-where-}
-        {-customKeys conf@(XConfig {XMonad.modMask = modm}) =-}
-            {-[ ((modm .|. shiftMask, xK_o), restart "openbox_wrapper" True) ]-}
-
 main = do
     replace
     xmonad desktopConfig {
@@ -86,5 +81,4 @@ main = do
     , logHook = myLogHook >> ewmhDesktopsLogHook >> takeTopFocus
     , startupHook = ewmhDesktopsStartup >> setWMName "LG3D"
     , handleEventHook = ewmhDesktopsEventHook
-    --, keys = myKeys
     }
