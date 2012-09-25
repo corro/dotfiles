@@ -15,6 +15,7 @@ import XMonad.Layout.FixedColumn
 import XMonad.Layout.WorkspaceDir
 import XMonad.Layout.IM
 import XMonad.Layout.Reflect
+import XMonad.Layout.TwoPane
 import XMonad.Util.Replace
 import XMonad.Actions.SpawnOn
 import XMonad.Hooks.ICCCMFocus
@@ -41,7 +42,7 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
         myTall    = Tall 1 0.03 0.7
         myCoding  = FixedColumn 1 20 84 10
         myConsole = Grid ||| myTall ||| Mirror myTall
-        myFile    = Mirror Grid
+        myFile    = TwoPane (3/100) (1/2)
         myMail    = Tall 1 0.03 0.5
         myChat    = withIM (18/100) (Role "buddy_list") Grid
 
