@@ -1,0 +1,43 @@
+# Tryton stuff
+snippet tfield
+	<field name="${1:name}"/>
+snippet ffield
+	<label name="${1:name}"/>
+	<field name="$1"/>
+snippet tview
+	<record model="ir.ui.view" id="${1:id}">
+		<field name="model">${2:model}</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<![CDATA[
+			<tree string="${3:Title}">
+			</tree>
+			]]>
+		</field>
+	</record>
+snippet fview
+	<record model="ir.ui.view" id="${1:id}">
+		<field name="model">${2:model}</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<![CDATA[
+			<form string="${3:Title}">
+			</form>
+			]]>
+		</field>
+	</record>
+snippet actwin
+	<record model="ir.action.act_window" id="act_${1:id}">
+		<field name="name">${2:Name}</field>
+		<field name="res_model">${3:model}</field>
+	</record>
+snippet actwinview
+	<record model="ir.action.act_window.view" id="${1:id}">
+		<field name="sequence" eval="${2:10}"/>
+		<field name="view" ref="${3:view_id}"/>
+		<field name="act_window" ref="${4:act_window_id}"/>
+	</record>
+snippet menuitem
+	<menuitem name="${1:Name}" parent="${2:parent_id}"
+			  sequence="${3:1}" id="${4:id}"
+			  action="${5:action_window_id}"/>
