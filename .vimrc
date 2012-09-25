@@ -108,6 +108,7 @@ let g:miniBufExplMapWindowNavVim=1
 let g:miniBufExplModSelTarget=1
 nmap <C-N> :bn<cr>
 nmap <C-P> :bp<cr>
+nmap <C-W> :bd<cr>
 
 " Word Completion
 let g:SuperTabMappingForward='<nul>'

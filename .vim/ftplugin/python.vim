@@ -12,7 +12,7 @@ import vim
 def EvaluateCurrentRange():
     eval(compile('\n'.join(vim.current.range),'','exec'),globals())
 EOL
-map <C-h> :py EvaluateCurrentRange()<cr>
+"map <C-h> :py EvaluateCurrentRange()<cr>
 
 " `gf` jumps to the filename under the cursor.  Point at an import statement
 " and jump to it!
