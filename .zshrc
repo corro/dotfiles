@@ -38,6 +38,9 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]
 zstyle ':completion:*' special-dirs true
 zstyle :compinstall filename '/home/robin/.zshrc'
 
+# Disable cache for command completion
+zstyle ":completion:*:commands" rehash 1
+
 # Do not correct vim to .vim
 setopt correct
 unsetopt correctall

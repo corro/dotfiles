@@ -13,6 +13,8 @@ import XMonad.Layout.DwmStyle
 import XMonad.Layout.NoBorders
 import XMonad.Layout.FixedColumn
 import XMonad.Layout.WorkspaceDir
+import XMonad.Layout.IM
+import XMonad.Layout.Reflect
 import XMonad.Util.Replace
 import XMonad.Actions.SpawnOn
 import XMonad.Hooks.ICCCMFocus
@@ -22,7 +24,7 @@ import qualified Data.Map as M
 myTerminal = "terminal"
 
 myWorkSpaces = ["1:web", "2:file", "3:coding", "4:console", "5:media",
-                "6:chat", "7", "8", "9" ]
+                "6", "7", "8:chat", "9:mail" ]
 
 myLayout = showWName $ avoidStruts $ smartBorders $ perWS
     where
@@ -31,24 +33,28 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
                 onWorkspace "3:coding"  myCoding   $
                 onWorkspace "4:console" myConsole  $
                 onWorkspace "5:media"   fullFirst  $
-                onWorkspace "6:chat"    myConsole  $
+                onWorkspace "8:chat"    myChat     $
+                onWorkspace "9:mail"    myMail     $
                                         tallFirst
         tallFirst = myTall ||| Mirror myTall ||| Full
         fullFirst = Full ||| myTall ||| Mirror myTall
-        myTall = Tall 1 0.03 0.7
-        myCoding = FixedColumn 1 20 84 10
+        myTall    = Tall 1 0.03 0.7
+        myCoding  = FixedColumn 1 20 84 10
         myConsole = Grid ||| myTall ||| Mirror myTall
-        myFile   = Mirror Grid
+        myFile    = Mirror Grid
+        myMail    = Tall 1 0.03 0.5
+        myChat    = withIM (18/100) (Role "buddy_list") Grid
 
 myLayoutHook = dwmStyle shrinkText defaultTheme myLayout
 
-myLogHook = fadeInactiveLogHook 0.9
+myLogHook = fadeInactiveLogHook 0.93
 
 myManageHook = composeAll
     [ className =? "Firefox"         --> shiftView "1:web"
     , className =? "Vlc"             --> shiftView "5:media"
     , className =? "Clementine"      --> shiftView "5:media"
     --, className =? "Evince"          --> shiftView "5:media"
+    , className =? "Pidgin"          --> shiftView "8:chat"
     , className =? "Xfrun4"          --> doCenterFloat
     , className =? "Speedcrunch"     --> doCenterFloat
     , className =? "Gimp"            --> doFloat
@@ -67,22 +73,17 @@ myManageHook = composeAll
     where
         shiftView = doF . liftM2 (.) W.greedyView W.shift
 
-{-myKeys x  = M.union (keys defaultConfig x) (M.fromList (customKeys x))-}
-    {-where-}
-        {-customKeys conf@(XConfig {XMonad.modMask = modm}) =-}
-            {-[ ((modm .|. shiftMask, xK_o), restart "openbox_wrapper" True) ]-}
-
 main = do
     replace
     xmonad desktopConfig {
       terminal = myTerminal
     , normalBorderColor = "#000000"
     , focusedBorderColor = "#ff0000"
+    , borderWidth = 2
     , workspaces  = myWorkSpaces
     , manageHook = myManageHook
     , layoutHook = myLayoutHook
     , logHook = myLogHook >> ewmhDesktopsLogHook >> takeTopFocus
     , startupHook = ewmhDesktopsStartup >> setWMName "LG3D"
     , handleEventHook = ewmhDesktopsEventHook
-    --, keys = myKeys
     }
