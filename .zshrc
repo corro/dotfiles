@@ -39,6 +39,7 @@ zstyle ':completion:*' special-dirs true
 zstyle :compinstall filename '/home/robin/.zshrc'
 
 # Do not correct vim to .vim
+setopt correct
 unsetopt correctall
 
 # End of lines added by compinstall
