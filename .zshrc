@@ -54,7 +54,6 @@ SAVEHIST=1000
 alias ls='ls --color=auto -X'
 alias ll='ls -l'
 alias la='ls -la'
-alias john_mpi='mpiexec -n 2 john'
 
 # My scripts
 PATH=~/Scripts:$PATH
