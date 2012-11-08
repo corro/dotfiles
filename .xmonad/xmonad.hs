@@ -44,7 +44,7 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
         myConsole = Grid ||| myTall ||| Mirror myTall
         myFile    = TwoPane (3/100) (1/2)
         myMail    = Tall 1 0.03 0.5
-        myChat    = withIM (18/100) (Role "buddy_list") Grid
+        myChat    = reflectHoriz $ withIM (18/100) (Role "buddy_list") Grid
 
 myLayoutHook = dwmStyle shrinkText defaultTheme myLayout
 
