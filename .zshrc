@@ -51,6 +51,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+# Aliases
 alias ls='ls --color=auto -X'
 alias ll='ls -l'
 alias la='ls -la'
