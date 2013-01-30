@@ -149,3 +149,9 @@ let g:ctrlp_map = 'e'
 
 " Ignore binary files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.pyc
+
+" Disable pylint checking every save
+let g:pymode_lint_write = 0
+
+" Forgotten sudo?
+cmap w!! w !sudo tee >/dev/null %
