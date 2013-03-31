@@ -111,7 +111,7 @@ nmap <C-P> :bp<cr>
 nmap <C-W> :bd<cr>
 
 " Word Completion
-let g:SuperTabMappingForward='<nul>'
+"let g:SuperTabMappingForward='<nul>'
 
 set t_Co=256
 colorscheme default
@@ -123,7 +123,7 @@ set scrolloff=15
 set clipboard=unnamed
 
 " 80
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
 
 " Highlight end of line whitespace.
 hi WhitespaceEOL guifg=#ff0000
@@ -152,6 +152,11 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.pyc
 
 " Disable pylint checking every save
 let g:pymode_lint_write = 0
+let g:pymode_utils_whitespaces = 0
 
 " Forgotten sudo?
 cmap w!! w !sudo tee >/dev/null %
+
+" Call pathogen
+call pathogen#infect()
+call pathogen#helptags()
