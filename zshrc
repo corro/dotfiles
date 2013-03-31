@@ -55,6 +55,7 @@ SAVEHIST=1000
 alias ls='ls --color=auto -X'
 alias ll='ls -l'
 alias la='ls -la'
+alias dia='dia --integrated'
 
 # My scripts
 PATH=~/Scripts:$PATH
