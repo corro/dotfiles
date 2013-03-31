@@ -22,3 +22,6 @@ code.google.com = 94:dc:6c:2f:ad:76:c1:65:f9:c6:79:e8:f4:84:49:be:d6:16:e5:ad
 [merge-tools]
 vimdiff.executable = vim
 vimdiff.args = -d $base $local $output $other +close +close
+
+[mq]
+secret = True
