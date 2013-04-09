@@ -84,3 +84,12 @@ snippet ifmain
 # __magic__
 snippet _
 	__${1:init}__${2}
+# Tryton-Stuff
+snippet model
+    from trytond.pool import Pool
+	from trytond.model import ModelSQL, ModelView, fields
+
+
+	class ${1:ModelName}(ModelSQL, ModelView):
+		'$1'
+        _name = '${2:model.name}'
