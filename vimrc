@@ -1,3 +1,14 @@
+let mapleader=','
+
+filetype off
+
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = ['autoclose']
+
+" Call pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -20,18 +31,6 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
-
-" In many terminal emulators the mouse works just fine, thus enable it.
-" if has('mouse')
-"   set mouse=a
-" endif
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -100,9 +99,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" Kein Code Folding by Default
-set nofoldenable
-
 " Buffer Explorer
 let g:miniBufExplMapWindowNavVim=1
 let g:miniBufExplModSelTarget=1
@@ -110,11 +106,9 @@ nmap <C-N> :bn<cr>
 nmap <C-P> :bp<cr>
 nmap <C-W> :bd<cr>
 
-" Word Completion
-"let g:SuperTabMappingForward='<nul>'
-
+" Set colorscheme
 set t_Co=256
-colorscheme default
+colorscheme xoria256
 
 " Line Numbering
 set number
@@ -136,14 +130,6 @@ nmap . .`[
 nmap cc <leader>c<space>
 vmap cc <leader>c<space>
 
-set foldmethod=indent
-
-" vim-latexsuite
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-imap <Tab> <Plug>IMAP_JumpForward
-nmap <Tab> <Plug>IMAP_JumpForward
-
 " CtrlP
 let g:ctrlp_map = 'e'
 
@@ -151,9 +137,10 @@ let g:ctrlp_map = 'e'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.pyc
 
 " PythonMode Options
-let g:pymode_lint_cwindow = 0
-let g:pymode_lint_write = 0
+let g:pymode_lint_cwindow = 1
+let g:pymode_lint_write = 1
 let g:pymode_lint_onfly = 1
+let g:pymode_lint_checker = "pyflakes"
 let g:pymode_indent = 0
 let g:pymode_rope_guess_project = 0
 let pymode_rope_extended_complete = 1
@@ -162,7 +149,3 @@ let pymode_rope_vim_completion = 1
 
 " Forgotten sudo?
 cmap w!! w !sudo tee >/dev/null %
-
-" Call pathogen
-call pathogen#infect()
-call pathogen#helptags()
