@@ -149,3 +149,10 @@ let pymode_rope_vim_completion = 1
 
 " Forgotten sudo?
 cmap w!! w !sudo tee >/dev/null %
+
+" Useful tab completion
+set wildmode=longest,list,full
+set wildmenu
+
+" Kein Code Folding by Default
+set nofoldenable
