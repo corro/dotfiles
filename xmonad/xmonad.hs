@@ -40,7 +40,7 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
         tallFirst = myTall ||| Mirror myTall ||| Full
         fullFirst = Full ||| myTall ||| Mirror myTall
         myTall    = Tall 1 0.03 0.7
-        myCoding  = FixedColumn 1 20 84 10
+        myCoding  = FixedColumn 1 20 84 10 ||| Full
         myConsole = Grid ||| myTall ||| Mirror myTall
         myFile    = TwoPane (3/100) (1/2)
         myMail    = Tall 1 0.03 0.5
@@ -52,6 +52,7 @@ myLogHook = fadeInactiveLogHook 0.93
 
 myManageHook = composeAll
     [ className =? "Firefox"         --> shiftView "1:web"
+    , className =? "Gvim"            --> shiftView "3:coding"
     , className =? "Vlc"             --> shiftView "5:media"
     , className =? "Clementine"      --> shiftView "5:media"
     --, className =? "Evince"          --> shiftView "5:media"
