@@ -15,4 +15,6 @@ imap <C-c>      <pass>
 imap <C-v>      <pass>
 imap <C-x>      <pass>
 
+set passkeys+=plus.google.com:jk
+
 " vim: set ft=pentadactyl:
