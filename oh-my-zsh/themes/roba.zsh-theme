@@ -5,7 +5,7 @@ if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 # $(git_prompt_info)\
 # $(hg_prompt_info) \
 
-PROMPT='%{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[blue]%}%m\
+PROMPT='%{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[cyan]%}%m\
 %{$reset_color%}:%{$fg[magenta]%}%~\
 %{$fg[red]%}%{$reset_color%} %(!.#.») '
 PROMPT1='%{$fg_bold[red]%}\ %{$reset_color%}'
