@@ -17,7 +17,7 @@ transplant =
 [hostfingerprints]
 bitbucket.org = 24:9c:45:8b:9c:aa:ba:55:4e:01:6d:58:ff:e4:28:7d:2a:14:ae:3b
 hg.openworkplace.ch = 20:11:77:4b:12:7c:3a:07:41:fc:2c:ae:a3:2f:20:f0:42:66:c5:04
-code.google.com = 94:dc:6c:2f:ad:76:c1:65:f9:c6:79:e8:f4:84:49:be:d6:16:e5:ad
+code.google.com = ad:cb:4a:80:19:66:a0:a7:dd:41:79:7b:b4:02:ad:53:38:01:3e:5b
 
 [merge-tools]
 vimdiff.executable = vim
