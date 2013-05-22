@@ -3,7 +3,7 @@ let mapleader=','
 filetype off
 
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['autoclose']
+let g:pathogen_disabled = ['autoclose', 'python-mode']
 
 " Call pathogen
 call pathogen#infect()
@@ -136,16 +136,8 @@ let g:ctrlp_map = 'e'
 " Ignore binary files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.pyc
 
-" PythonMode Options
-let g:pymode_lint_cwindow = 1
-let g:pymode_lint_write = 1
-let g:pymode_lint_onfly = 1
-let g:pymode_lint_checker = "pyflakes"
-let g:pymode_indent = 0
-let g:pymode_rope_guess_project = 0
-let pymode_rope_extended_complete = 1
-let pymode_breakpoint = 0
-let pymode_rope_vim_completion = 1
+" Syntastic options
+let g:syntastic_python_checkers=['pyflakes']
 
 " Forgotten sudo?
 cmap w!! w !sudo tee >/dev/null %
