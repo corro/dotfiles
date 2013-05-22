@@ -156,3 +156,8 @@ set wildmenu
 
 " Kein Code Folding by Default
 set nofoldenable
+
+" EasyMotion options
+let g:EasyMotion_leader_key = 'f'
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
+let g:EasyMotion_grouping = 2
