@@ -58,7 +58,7 @@ alias la='ls -la'
 alias dia='dia --integrated'
 
 # My scripts
-PATH=~/Scripts:$PATH
+PATH=~/Scripts:~/.cabal/bin:$PATH
 
 # Set editor
 EDITOR=vim
