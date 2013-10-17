@@ -1,13 +1,21 @@
-let mapleader=','
-
-filetype off
+" ********
+" Pathogen
+" ********
 
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['autoclose', 'python-mode']
+let g:pathogen_disabled = []
 
 " Call pathogen
 call pathogen#infect()
 call pathogen#helptags()
+
+" *******
+" General
+" *******
+
+let mapleader=','
+
+filetype off
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -93,28 +101,21 @@ set undodir=~/.vim/undo,/tmp
 " Statusleiste anzeigen
 set laststatus=2
 
+" Line Numbering
+set number
+
+set scrolloff=15
+set clipboard=unnamed
+
 " Tabs sind doof...
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" Buffer Explorer
-let g:miniBufExplMapWindowNavVim=1
-let g:miniBufExplModSelTarget=1
-nmap <C-N> :bn<cr>
-nmap <C-P> :bp<cr>
-nmap <C-W> :bd<cr>
-
 " Set colorscheme
 set t_Co=256
 colorscheme xoria256
-
-" Line Numbering
-set number
-
-set scrolloff=15
-set clipboard=unnamed
 
 " 80
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
@@ -126,18 +127,8 @@ match WhitespaceEOL /\s\+$/
 " Punkt-Abkürzung verbessern
 nmap . .`[
 
-" Comments
-nmap cc <leader>c<space>
-vmap cc <leader>c<space>
-
-" CtrlP
-let g:ctrlp_map = 'e'
-
 " Ignore binary files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.pyc
-
-" Syntastic options
-let g:syntastic_python_checkers=['pyflakes']
 
 " Forgotten sudo?
 cmap w!! w !sudo tee >/dev/null %
@@ -149,7 +140,43 @@ set wildmenu
 " Kein Code Folding by Default
 set nofoldenable
 
-" EasyMotion options
-let g:EasyMotion_leader_key = 'f'
-let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
-let g:EasyMotion_grouping = 2
+" Easy split navigation
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+" *******
+" Plugins
+" *******
+
+" MiniBufExpl
+let g:miniBufExplMapWindowNavVim=1
+let g:miniBufExplModSelTarget=1
+nmap <C-N> :bn<cr>
+nmap <C-P> :bp<cr>
+nmap <C-W> :bd<cr>
+
+" NERDCommenter
+nmap cc <leader>c<space>
+vmap cc <leader>c<space>
+
+" CtrlP
+let g:ctrlp_map = 'e'
+
+" Syntastic
+let g:syntastic_python_checkers=['pyflakes']
+
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"RO":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
+
+" NERDTree
+nmap <c-t> :NERDTreeToggle<cr>
+let NERDTreeShowBookmarks=1

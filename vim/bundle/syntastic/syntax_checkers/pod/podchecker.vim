@@ -21,12 +21,28 @@ endfunction
 function! SyntaxCheckers_pod_podchecker_GetLocList()
     let makeprg = syntastic#makeprg#build({
         \ 'exe': 'podchecker',
+        \ 'filetype': 'pod',
         \ 'subchecker': 'podchecker' })
+
     let errorformat =
         \ '%W%[%#]%[%#]%[%#] WARNING: %m at line %l in file %f,' .
-        \ '%E%[%#]%[%#]%[%#] ERROR: %m at line %l in file %f'
+        \ '%W%[%#]%[%#]%[%#] WARNING: %m at line EOF in file %f,' .
+        \ '%E%[%#]%[%#]%[%#] ERROR: %m at line %l in file %f,' .
+        \ '%E%[%#]%[%#]%[%#] ERROR: %m at line EOF in file %f'
 
-    return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
+    let loclist = SyntasticMake({
+        \ 'makeprg': makeprg,
+        \ 'errorformat': errorformat,
+        \ 'returns': [0, 1, 2] })
+
+    for n in range(len(loclist))
+        let e = loclist[n]
+        if e['valid'] && e['lnum'] == 0
+            let e['lnum'] = str2nr(matchstr(e['text'], '\m\<line \zs\d\+\ze'))
+        endif
+    endfor
+
+    return loclist
 endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
