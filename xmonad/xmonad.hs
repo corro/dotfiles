@@ -67,6 +67,7 @@ myManageHook = composeAll
     , className =? "VirtualBox"      --> doCenterFloat
     , className =? "Wicd-client.py"  --> doCenterFloat
     , appName   =? "Download"        --> doCenterFloat
+    , title     =? "File Operation Progress" --> doCenterFloat
     , title     =? "Panda"           --> doFloat
     , isFullscreen                   --> doFullFloat
     , isDialog                       --> doCenterFloat
