@@ -29,6 +29,7 @@ lightline#tabline()	lightline.txt	/*lightline#tabline()*
 lightline#update()	lightline.txt	/*lightline#update()*
 lightline#update_once()	lightline.txt	/*lightline#update_once()*
 lightline-changelog	lightline.txt	/*lightline-changelog*
+lightline-colorscheme	lightline.txt	/*lightline-colorscheme*
 lightline-component-expansion	lightline.txt	/*lightline-component-expansion*
 lightline-contents	lightline.txt	/*lightline-contents*
 lightline-examples	lightline.txt	/*lightline-examples*
