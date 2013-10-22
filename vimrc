@@ -100,6 +100,7 @@ set undodir=~/.vim/undo,/tmp
 
 " Statusleiste anzeigen
 set laststatus=2
+set noshowmode
 
 " Line Numbering
 set number
@@ -173,8 +174,6 @@ let g:lightline = {
       \ 'component': {
       \   'readonly': '%{&readonly?"RO":""}',
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 " NERDTree
