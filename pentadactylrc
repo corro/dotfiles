@@ -15,6 +15,9 @@ imap <C-c>      <pass>
 imap <C-v>      <pass>
 imap <C-x>      <pass>
 
-set passkeys+=plus.google.com:jk
+set passkeys+=plus.google.com:jknp
+
+autocmd LocationChange docs.google.com :normal! <C-z>
+autocmd LocationChange drive.google.com :normal! <C-z>
 
 " vim: set ft=pentadactyl:
