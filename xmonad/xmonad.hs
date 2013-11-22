@@ -24,7 +24,7 @@ import qualified Data.Map as M
 
 myTerminal = "xfce4-terminal"
 
-myWorkSpaces = ["1:web", "2:file", "3:coding", "4:console", "5:media",
+myWorkSpaces = ["1:web", "2:file", "3:coding", "4:info", "5:media",
                 "6", "7", "8:chat", "9:mail" ]
 
 myLayout = showWName $ avoidStruts $ smartBorders $ perWS
@@ -32,7 +32,7 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
         perWS = onWorkspace "1:web"     tallFirst  $
                 onWorkspace "2:file"    myFile     $
                 onWorkspace "3:coding"  myCoding   $
-                onWorkspace "4:console" myConsole  $
+                onWorkspace "4:info"    myConsole  $
                 onWorkspace "5:media"   fullFirst  $
                 onWorkspace "8:chat"    myChat     $
                 onWorkspace "9:mail"    myMail     $
@@ -53,10 +53,11 @@ myLogHook = fadeInactiveLogHook 0.93
 myManageHook = composeAll
     [ className =? "Firefox"         --> shiftView "1:web"
     , className =? "Gvim"            --> shiftView "3:coding"
+    , className =? "Evince"          --> shiftView "4:info"
     , className =? "Vlc"             --> shiftView "5:media"
     , className =? "Clementine"      --> shiftView "5:media"
-    --, className =? "Evince"          --> shiftView "5:media"
     , className =? "Pidgin"          --> shiftView "8:chat"
+    , className =? "Thunderbird"     --> doShift   "9:mail"
     , className =? "Xfrun4"          --> doCenterFloat
     , className =? "Speedcrunch"     --> doCenterFloat
     , className =? "Gimp"            --> doFloat
