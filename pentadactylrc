@@ -1,23 +1,18 @@
-"1.0b6 (created: 2011/03/09 09:25:18)
+"1.1pre-hg6983-default
 
 loadplugins '\.(js|penta)$'
 group user
 highlight Hint font: bold 12px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 3px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .8); color: black; text-transform: uppercase;
 highlight StatusLineNormal background: #3C3B37; color: #ffffff;
-map -modes=n,v <C-b> :emenu<Space>View.Sidebar.Bookmarks<Return>
+map -count -modes=n,v <C-b> <count>:emenu<Space>View.Sidebar.Bookmarks<Return>
+map -count -modes=i <C-a> <Pass>
+map -count -modes=i <C-c> <Pass>
+map -count -modes=i <C-v> <Pass>
+map -count -modes=i <C-x> <Pass>
 set autocomplete=
+set defsearch=duck
 set guioptions=rs
 set hintkeys=abcdefghijklmnopqrstuvwxyz
-set! browser.tabs.closeWindowWithLastTab=false
-
-imap <C-a>      <pass>
-imap <C-c>      <pass>
-imap <C-v>      <pass>
-imap <C-x>      <pass>
-
-set passkeys+=plus.google.com:jknp
-
-autocmd LocationChange docs.google.com :normal! <C-z>
-autocmd LocationChange drive.google.com :normal! <C-z>
+set passkeys=plus.google.com:jknp
 
 " vim: set ft=pentadactyl:
