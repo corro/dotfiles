@@ -38,6 +38,7 @@
 :Hgvdiff_f	lawrencium.txt	/*:Hgvdiff_f*
 :Hgvdiffsumsplit	lawrencium.txt	/*:Hgvdiffsumsplit*
 :Hgvdiffsumsplit_f	lawrencium.txt	/*:Hgvdiffsumsplit_f*
+:Hgvimgrep	lawrencium.txt	/*:Hgvimgrep*
 Hgannotatediffsum	lawrencium.txt	/*Hgannotatediffsum*
 lawrencium	lawrencium.txt	/*lawrencium*
 lawrencium-annotate-window	lawrencium.txt	/*lawrencium-annotate-window*
