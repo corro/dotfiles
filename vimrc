@@ -166,7 +166,8 @@ vmap cc <leader>c<space>
 let g:ctrlp_map = 'e'
 
 " Syntastic
-let g:syntastic_python_checkers=['pyflakes']
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args="--ignore=E123,E124,E126,E128"
 
 " Lightline
 let g:lightline = {
