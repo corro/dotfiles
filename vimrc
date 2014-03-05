@@ -161,6 +161,9 @@ nmap <C-W> :bd<cr>
 " NERDCommenter
 nmap cc <leader>c<space>
 vmap cc <leader>c<space>
+let g:NERDCustomDelimiters = {
+    \ 'rst': { 'left': '.. '},
+\ }
 
 " CtrlP
 let g:ctrlp_map = 'e'
