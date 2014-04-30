@@ -76,6 +76,7 @@ hi Visual       ctermfg=255 guifg=#eeeeee ctermbg=96  guibg=#875f87
 " hi Visual       ctermfg=255 guifg=#eeeeee ctermbg=24  guibg=#005f87
 hi VisualNOS    ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
 hi WildMenu     ctermfg=0   guifg=#000000 ctermbg=150 guibg=#afdf87 cterm=bold gui=bold
+hi ColorColumn  ctermbg=235 guibg=#232323
 
 "" Syntax highlighting {{{2
 hi Comment      ctermfg=244 guifg=#808080

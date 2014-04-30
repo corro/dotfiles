@@ -3,7 +3,7 @@
 " ********
 
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = []
+let g:pathogen_disabled = ['minibufexpl']
 
 " Call pathogen
 call pathogen#infect()
@@ -119,7 +119,7 @@ set t_Co=256
 colorscheme xoria256
 
 " 80
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
+let &colorcolumn=join(range(81,999),",")
 
 " Highlight end of line whitespace.
 hi WhitespaceEOL guifg=#ff0000
@@ -147,16 +147,17 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+" Easy tab navigation
+nmap <c-n> :tabn<cr>
+nmap <c-p> :tabp<cr>
+
 " *******
 " Plugins
 " *******
 
 " MiniBufExpl
-let g:miniBufExplMapWindowNavVim=1
-let g:miniBufExplModSelTarget=1
-nmap <C-N> :bn<cr>
-nmap <C-P> :bp<cr>
-nmap <C-W> :bd<cr>
+"let g:miniBufExplMapWindowNavVim=1
+"let g:miniBufExplModSelTarget=1
 
 " NERDCommenter
 nmap cc <leader>c<space>
