@@ -32,7 +32,7 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
         perWS = onWorkspace "1:web"     tallFirst  $
                 onWorkspace "2:file"    myFile     $
                 onWorkspace "3:coding"  myCoding   $
-                onWorkspace "4:info"    myConsole  $
+                onWorkspace "4:info"    myCoding   $
                 onWorkspace "5:media"   fullFirst  $
                 onWorkspace "8:chat"    myChat     $
                 onWorkspace "9:mail"    myMail     $
@@ -43,8 +43,8 @@ myLayout = showWName $ avoidStruts $ smartBorders $ perWS
         myCoding  = FixedColumn 1 20 84 10 ||| Full
         myConsole = Grid ||| myTall ||| Mirror myTall
         myFile    = TwoPane (3/100) (1/2)
-        myMail    = Tall 1 0.03 0.5
-        myChat    = reflectHoriz $ withIM (18/100) (Role "buddy_list") Grid
+        myMail    = Tall 1 0.03 0.4 ||| Full
+        myChat    = reflectHoriz $ withIM (18/100) (Role "buddy_list") Grid ||| Full
 
 myLayoutHook = dwmStyle shrinkText defaultTheme myLayout
 
@@ -52,8 +52,6 @@ myLogHook = fadeInactiveLogHook 0.93
 
 myManageHook = composeAll
     [ className =? "Firefox"         --> shiftView "1:web"
-    , className =? "Gvim"            --> shiftView "3:coding"
-    , className =? "Evince"          --> shiftView "4:info"
     , className =? "Vlc"             --> shiftView "5:media"
     , className =? "Clementine"      --> shiftView "5:media"
     , className =? "Pidgin"          --> shiftView "8:chat"
