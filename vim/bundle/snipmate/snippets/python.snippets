@@ -84,3 +84,14 @@ snippet ifmain
 # __magic__
 snippet _
 	__${1:init}__${2}
+snippet unittest
+	import unittest
+
+
+	class Test${1:Name}(unittest.TestCase):
+
+		def setUp(self):
+			pass
+
+		def test_${2:name}(self):
+			${3:pass}
