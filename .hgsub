@@ -1,0 +1,12 @@
+vim/bundle/ack = [git]https://github.com/mileszs/ack.vim.git
+vim/bundle/autoclose = [git]https://github.com/Townk/vim-autoclose.git
+vim/bundle/ctrlp = [git]https://github.com/kien/ctrlp.vim.git
+vim/bundle/lawrencium = [git]https://github.com/ludovicchabant/vim-lawrencium.git
+vim/bundle/lightline = [git]https://github.com/itchyny/lightline.vim.git
+vim/bundle/nerdcommenter = [git]https://github.com/scrooloose/nerdcommenter.git
+vim/bundle/nerdtree = [git]https://github.com/scrooloose/nerdtree.git
+vim/bundle/minibufexpl = [git]https://github.com/vim-scripts/minibufexpl.vim.git
+vim/bundle/repeat = [git]https://github.com/tpope/vim-repeat.git
+vim/bundle/snipmate = [git]https://github.com/msanders/snipmate.vim.git
+vim/bundle/surround = [git]https://github.com/tpope/vim-surround.git
+vim/bundle/syntastic = [git]https://github.com/scrooloose/syntastic.git
