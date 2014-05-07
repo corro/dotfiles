@@ -119,7 +119,7 @@ set t_Co=256
 colorscheme xoria256
 
 " 80
-let &colorcolumn=join(range(81,999),",")
+let &colorcolumn=join(range(80,999),",")
 
 " Highlight end of line whitespace.
 hi WhitespaceEOL guifg=#ff0000
