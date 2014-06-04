@@ -15,9 +15,6 @@ transplant =
 progress =
 pager =
 
-[hostfingerprints]
-hg.trytonerp.ch = 20:11:77:4b:12:7c:3a:07:41:fc:2c:ae:a3:2f:20:f0:42:66:c5:04
-
 [merge-tools]
 vimdiff.executable = vim
 vimdiff.args = -d $base $local $output $other +close +close
