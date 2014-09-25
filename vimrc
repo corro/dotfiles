@@ -3,7 +3,7 @@
 " ********
 
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['minibufexpl']
+let g:pathogen_disabled = []
 
 " Call pathogen
 call pathogen#infect()
@@ -154,10 +154,6 @@ nmap <c-p> :tabp<cr>
 " *******
 " Plugins
 " *******
-
-" MiniBufExpl
-"let g:miniBufExplMapWindowNavVim=1
-"let g:miniBufExplModSelTarget=1
 
 " NERDCommenter
 nmap cc <leader>c<space>

@@ -5,7 +5,6 @@ vim/bundle/lawrencium = [git]https://github.com/ludovicchabant/vim-lawrencium.gi
 vim/bundle/lightline = [git]https://github.com/itchyny/lightline.vim.git
 vim/bundle/nerdcommenter = [git]https://github.com/scrooloose/nerdcommenter.git
 vim/bundle/nerdtree = [git]https://github.com/scrooloose/nerdtree.git
-vim/bundle/minibufexpl = [git]https://github.com/vim-scripts/minibufexpl.vim.git
 vim/bundle/repeat = [git]https://github.com/tpope/vim-repeat.git
 vim/bundle/simpylfold = [git]https://github.com/tmhedberg/SimpylFold.git
 vim/bundle/snipmate = [git]https://github.com/msanders/snipmate.vim.git
