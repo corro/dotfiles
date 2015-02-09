@@ -1,0 +1,10 @@
+set toolbars=nonavigation
+set cpt=slt
+set hintchars=abcdefghijklmnopqrstuvwxyz
+set status=input,location,bookmark,history,tabcount,position,ssl
+set focuscontent=true
+
+nmap s :open duck 
+nmap S :tabopen duck 
+
+highlight Hint font: bold 12px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 3px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .8); color: black; text-transform: uppercase;
