@@ -87,5 +87,5 @@ main = do
     , layoutHook = myLayoutHook
     , logHook = myLogHook >> ewmhDesktopsLogHook >> takeTopFocus
     , startupHook = ewmhDesktopsStartup >> setWMName "LG3D"
-    , handleEventHook = ewmhDesktopsEventHook
+    , handleEventHook = ewmhDesktopsEventHook >> fullscreenEventHook
     }
