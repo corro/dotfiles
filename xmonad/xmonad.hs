@@ -18,6 +18,7 @@ import XMonad.Layout.Reflect
 import XMonad.Layout.TwoPane
 import XMonad.Util.Replace
 import XMonad.Actions.SpawnOn
+import XMonad.Actions.PhysicalScreens
 import XMonad.Hooks.ICCCMFocus
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
@@ -75,6 +76,11 @@ myManageHook = composeAll
     where
         shiftView = doF . liftM2 (.) W.greedyView W.shift
 
+myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList
+         [((modm .|. mask, key), f sc)
+             | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
+             , (f, mask) <- [(viewScreen, 0), (sendToScreen, shiftMask)]]
+
 main = do
     replace
     xmonad desktopConfig {
@@ -85,6 +91,7 @@ main = do
     , workspaces  = myWorkSpaces
     , manageHook = myManageHook
     , layoutHook = myLayoutHook
+    , keys = myKeys <+> keys defaultConfig
     , logHook = myLogHook >> ewmhDesktopsLogHook >> takeTopFocus
     , startupHook = ewmhDesktopsStartup >> setWMName "LG3D"
     , handleEventHook = ewmhDesktopsEventHook >> fullscreenEventHook
