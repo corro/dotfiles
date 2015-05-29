@@ -1,6 +1,7 @@
 303bceff1c8ab1145d114083582b1aeac9de7a85 vim/bundle/ack
 a9a3b7384657bc1f60a963fd6c08c63fc48d61c3 vim/bundle/autoclose
 b5d3fe66a58a13d2ff8b6391f4387608496a030f vim/bundle/ctrlp
+21b6dd7aeec3e4bc96d7b32cd594b7818c0c4082 vim/bundle/fugitive
 a5b5107729cc0fa9f001df51377f470931a2b4a8 vim/bundle/lawrencium
 72a413e60c101e71f26ef2e3cf42d662fe730aae vim/bundle/lightline
 6549cfde45339bd4f711504196ff3e8b766ef5e6 vim/bundle/nerdcommenter
