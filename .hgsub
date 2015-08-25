@@ -10,4 +10,4 @@ vim/bundle/simpylfold = [git]https://github.com/tmhedberg/SimpylFold.git
 vim/bundle/snipmate = [git]https://github.com/msanders/snipmate.vim.git
 vim/bundle/surround = [git]https://github.com/tpope/vim-surround.git
 vim/bundle/syntastic = [git]https://github.com/scrooloose/syntastic.git
-vim/bundle/fugitive = [git]https://github.com/tpope/fugitive.git
+vim/bundle/fugitive = [git]https://github.com/tpope/vim-fugitive.git
