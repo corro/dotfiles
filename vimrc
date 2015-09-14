@@ -106,7 +106,7 @@ set noshowmode
 set number
 
 set scrolloff=15
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Tabs sind doof...
 set expandtab
