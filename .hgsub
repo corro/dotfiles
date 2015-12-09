@@ -1,3 +1,4 @@
+oh-my-zsh = [git]https://github.com/robbyrussell/oh-my-zsh.git
 vim/bundle/ack = [git]https://github.com/mileszs/ack.vim.git
 vim/bundle/autoclose = [git]https://github.com/Townk/vim-autoclose.git
 vim/bundle/ctrlp = [git]https://github.com/kien/ctrlp.vim.git
