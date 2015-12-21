@@ -1,1 +1,1 @@
-set tw=79
+text.vim
