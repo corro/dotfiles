@@ -1,10 +1,5 @@
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
-#╭─
-#╰─
-# $(git_prompt_info)\
-# $(hg_prompt_info) \
-
 function vcs_info {
     hg_prompt_info
     git_prompt_info
