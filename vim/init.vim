@@ -39,6 +39,12 @@ set noshowmode
 " Line Numbering
 set number
 
+" Expand tabs
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
 set scrolloff=15
 set clipboard=unnamedplus
 
