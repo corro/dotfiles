@@ -93,6 +93,6 @@ main = do
     , layoutHook = myLayoutHook
     , keys = myKeys <+> keys defaultConfig
     , logHook = myLogHook >> ewmhDesktopsLogHook >> takeTopFocus
-    , startupHook = ewmhDesktopsStartup >> setWMName "LG3D"
+    , startupHook = ewmhDesktopsStartup
     , handleEventHook = ewmhDesktopsEventHook >> fullscreenEventHook
     }
