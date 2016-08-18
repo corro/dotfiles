@@ -10,3 +10,5 @@
 	default = simple
 [core]
 	excludesfile = /home/robin/.gitignore
+	pager = less -F -X
+	editor = vim
