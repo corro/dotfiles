@@ -8,7 +8,11 @@
 	email = robin@baumgartners.ch
 [push]
 	default = simple
+[branch]
+	autosetuprebase = always
 [core]
 	excludesfile = ~/.gitignore
 	pager = less -F -X
 	editor = vim
+[merge]
+	tool = vimdiff
