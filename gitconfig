@@ -9,6 +9,6 @@
 [push]
 	default = simple
 [core]
-	excludesfile = /home/robin/.gitignore
+	excludesfile = ~/.gitignore
 	pager = less -F -X
 	editor = vim
