@@ -1,7 +1,7 @@
 1b7fc2f3aca32ba8713be0e27305c5cf578033f6 oh-my-zsh
 eede0425f50d92be89ee8fb4560a5afb707c2a54 vim/bundle/ack
 564176f01d7f3f7f8ab452ff4e1f5314de7b0981 vim/bundle/ctrlp
-2e75fb1c7df27ff92da0ff0e9de8eafa2abf58aa vim/bundle/deoplete
+640fcb05dd8db9f37005aa0e868682d466630ecc vim/bundle/deoplete
 13c69a4baefdcf3be4288d82b9a75405fff06838 vim/bundle/deoplete-jedi
 b754bc2031f21a532c083dd0d072ba373bbe3a37 vim/bundle/fugitive
 a8732104ddd5d1f778943d09cf09de7bfb4cfb26 vim/bundle/lawrencium
