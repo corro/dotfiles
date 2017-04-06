@@ -84,7 +84,7 @@ nmap <c-p> :tabp<cr>
 set completeopt=longest,menuone
 
 " Fix terminal issues
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+set guicursor=
 
 " *******
 " Plugins
