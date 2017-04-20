@@ -93,6 +93,5 @@ main = do
     , layoutHook = myLayoutHook
     , keys = myKeys <+> keys defaultConfig
     , logHook = myLogHook >> ewmhDesktopsLogHook >> takeTopFocus
-    , startupHook = ewmhDesktopsStartup
     , handleEventHook = ewmhDesktopsEventHook >> fullscreenEventHook
     }
