@@ -1,5 +1,4 @@
 " Python Abkürzungen
-iab def def():<Left><Left><Left>
 
 " Run
 nmap <F5> :!python %<cr>
