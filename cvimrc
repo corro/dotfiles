@@ -1,0 +1,21 @@
+set smoothscroll
+let scrollduration=500
+set completeonopen
+set noautofocus
+let hintcharacters='abcdefghijklmnopqrstuvwxyz'
+map K previousTab
+map J nextTab
+let searchengine jira = ["https://jira.studer-raimann.ch", "https://jira.studer-raimann.ch/issues/?jql=text%20~%20%22%s%22"]
+let searchalias g = "google"
+let searchalias j = "jira"
+map s :open g<Space>
+map S :tabnew g<Space>
+unmap w
+unmap a
+" Code blocks (see below for more info)
+getIP() -> {{
+httpRequest({url: 'http://api.ipify.org/?format=json', json: true},
+            function(res) { Status.setMessage('IP: ' + res.ip); });
+}}
+" Displays your public IP address in the status bar
+map ci :call getIP<CR>
