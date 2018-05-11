@@ -1,16 +1,1 @@
 oh-my-zsh = [git]https://github.com/robbyrussell/oh-my-zsh.git
-vim/bundle/ack = [git]https://github.com/mileszs/ack.vim.git
-vim/bundle/lexima = [git]https://github.com/cohama/lexima.vim.git
-vim/bundle/ctrlp = [git]https://github.com/ctrlpvim/ctrlp.vim.git
-vim/bundle/lawrencium = [git]https://github.com/ludovicchabant/vim-lawrencium.git
-vim/bundle/lightline = [git]https://github.com/itchyny/lightline.vim.git
-vim/bundle/nerdcommenter = [git]https://github.com/scrooloose/nerdcommenter.git
-vim/bundle/nerdtree = [git]https://github.com/scrooloose/nerdtree.git
-vim/bundle/repeat = [git]https://github.com/tpope/vim-repeat.git
-vim/bundle/snipmate = [git]https://github.com/msanders/snipmate.vim.git
-vim/bundle/surround = [git]https://github.com/tpope/vim-surround.git
-vim/bundle/syntastic = [git]https://github.com/scrooloose/syntastic.git
-vim/bundle/fugitive = [git]https://github.com/tpope/vim-fugitive.git
-vim/bundle/whitespace = [git]https://github.com/ntpeters/vim-better-whitespace.git
-vim/bundle/deoplete = [git]https://github.com/Shougo/deoplete.nvim.git
-vim/bundle/deoplete-jedi = [git]https://github.com/zchee/deoplete-jedi.git

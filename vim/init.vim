@@ -1,13 +1,26 @@
 " ********
-" Pathogen
+" VIM Plug
 " ********
 
-" To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['nerdtree']
+call plug#begin('~/.vim/plugged')
 
-" Call pathogen
-call pathogen#infect()
-call pathogen#helptags()
+let g:plug_window = 'horizontal top new'
+
+Plug 'mileszs/ack.vim', { 'as': 'ack' }
+Plug 'ctrlpvim/ctrlp.vim', { 'as': 'ctrlp' }
+Plug 'Shougo/deoplete.nvim', { 'as': 'deoplete' }
+Plug 'zchee/deoplete-jedi', { 'as': 'deoplete-jedi' }
+Plug 'tpope/vim-fugitive', { 'as': 'fugitive' }
+Plug 'ludovicchabant/vim-lawrencium', { 'as': 'lawrencium' }
+Plug 'cohama/lexima.vim', { 'as': 'lexima' }
+Plug 'itchyny/lightline.vim', { 'as': 'lightline' }
+Plug 'tpope/vim-repeat', { 'as': 'repeat' }
+Plug 'msanders/snipmate.vim', { 'as': 'snipmate' }
+Plug 'tpope/vim-surround', { 'as': 'surround' }
+Plug 'scrooloose/syntastic', { 'as': 'syntastic' }
+Plug 'ntpeters/vim-better-whitespace', { 'as': 'better-whitespace' }
+
+call plug#end()
 
 " *******
 " General
@@ -90,11 +103,6 @@ set guicursor=
 " Plugins
 " *******
 
-" NERDCommenter
-let g:NERDCustomDelimiters = {
-    \ 'rst': { 'left': '.. '},
-\ }
-
 " CtrlP
 let g:ctrlp_map = '<c-e>'
 noremap <c-b> :CtrlPBuffer<cr>
@@ -118,6 +126,5 @@ let g:lightline = {
       \ },
       \ }
 
-" NERDTree
-nmap <c-t> :NERDTreeToggle<cr>
-let NERDTreeShowBookmarks=1
+" Deoplete
+let g:deoplete#enable_at_startup = 1

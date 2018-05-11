@@ -8,5 +8,6 @@ xmonad.errors
 xmonad.hi
 xmonad.o
 vim/.netrwhist
+vim/plugged
 oh-my-zsh/cache
 tags
