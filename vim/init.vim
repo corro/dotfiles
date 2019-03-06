@@ -117,6 +117,7 @@ let g:ctrlp_user_command = {
 " Syntastic
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args="--ignore=E123,E124,E126,E128"
+let g:syntastic_markdown_mdl_args="--ignore=MD001"
 
 " Lightline
 let g:lightline = {
