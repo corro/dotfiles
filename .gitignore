@@ -1,7 +1,3 @@
-syntax: glob
-
-.git
-.gitignore
 *.pyc
 xmonad-x86_64-linux
 xmonad.errors
