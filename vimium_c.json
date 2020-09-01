@@ -1,0 +1,33 @@
+{
+	"name": "Vimium C",
+	"@time": "9/1/2020, 2:57:32 PM",
+	"time": 1598965052014,
+	"environment": {
+		"extension": "1.85.1",
+		"platform": "linux",
+		"chrome": 85
+	},
+	"exclusionRules": [
+		{
+			"pattern": ":https://mail.google.com/",
+			"passKeys": "d j k n p s v "
+		}
+	],
+	"grabBackFocus": true,
+	"keyMappings": [
+		"map J nextTab",
+		"map K previousTab",
+		""
+	],
+	"linkHintCharacters": "abcdefghijklmnopqrstuvwxyz",
+	"notifyUpdate": false,
+	"searchEngines": [
+		"g|go|gg|google: https://www.google.com/search?q=%s Google",
+		"js\\:|Js: javascript:\\ $S; JavaScript",
+		"w|wiki:\\",
+		"  https://www.wikipedia.org/w/index.php?search=%s Wikipedia",
+		"v.m|v\\:math: vimium://math\\ $S re= Calculate",
+		"j|ji|jira: https://jira.studer-raimann.ch/issues/?jql=text%20~%20%22%s%22",
+		""
+	]
+}
