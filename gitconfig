@@ -6,6 +6,8 @@
 [user]
 	name = Robin Baumgartner
 	email = robin@baumgartners.ch
+[pull]
+	rebase = true
 [push]
 	default = simple
 	followTags = true
