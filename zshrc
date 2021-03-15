@@ -55,7 +55,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # Aliases
-alias ls='ls --color=auto -X'
+alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ls -la'
 alias dia='dia --integrated'
