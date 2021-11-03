@@ -23,7 +23,7 @@ import XMonad.Hooks.ICCCMFocus
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
-myTerminal = "xfce4-terminal"
+myTerminal = "kitty"
 
 myWorkSpaces = ["1:web", "2:file", "3:coding", "4:info", "5:media",
                 "6", "7", "8:chat", "9:mail" ]

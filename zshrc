@@ -59,6 +59,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ls -la'
 alias dia='dia --integrated'
+alias ssh='kitty +kitten ssh'
 
 # My scripts
 PATH=~/Scripts:~/.local/bin:$PATH
