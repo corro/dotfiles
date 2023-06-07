@@ -11,7 +11,6 @@ Plug 'ctrlpvim/ctrlp.vim', { 'as': 'ctrlp' }
 Plug 'Shougo/deoplete.nvim', { 'as': 'deoplete' }
 Plug 'deoplete-plugins/deoplete-jedi', { 'as': 'deoplete-jedi' }
 Plug 'tpope/vim-fugitive', { 'as': 'fugitive' }
-Plug 'ludovicchabant/vim-lawrencium', { 'as': 'lawrencium' }
 Plug 'cohama/lexima.vim', { 'as': 'lexima' }
 Plug 'itchyny/lightline.vim', { 'as': 'lightline' }
 Plug 'tpope/vim-repeat', { 'as': 'repeat' }
