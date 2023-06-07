@@ -4,7 +4,7 @@
 
 call plug#begin('~/.vim/plugged')
 
-let g:plug_window = 'horizontal top new'
+let g:plug_window='tabnew'
 
 Plug 'mileszs/ack.vim', { 'as': 'ack' }
 Plug 'ctrlpvim/ctrlp.vim', { 'as': 'ctrlp' }
