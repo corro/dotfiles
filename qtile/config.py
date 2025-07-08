@@ -27,7 +27,7 @@
 import subprocess
 
 from libqtile import bar, layout, qtile, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 
 mod = 'mod1'
@@ -123,6 +123,27 @@ for group in groups:
                  desc=f'move focused window to group {group.name}'),
         ]
     )
+
+# ScratchPads
+dropdown_config = dict(
+    width=0.8,
+    height=0.8,
+    x=0.1,
+    y=0.1,
+    opacity=0.9,
+)
+groups.extend([
+    ScratchPad('scratchpad', [
+            DropDown('shell', 'kitty', **dropdown_config),
+            DropDown('ranger', 'kitty ranger', **dropdown_config),
+            DropDown('vim', 'kitty vim', **dropdown_config),
+        ]),
+])
+keys.extend([
+    Key([mod], 's', lazy.group['scratchpad'].dropdown_toggle('shell')),
+    Key([mod], 't', lazy.group['scratchpad'].dropdown_toggle('ranger')),
+    Key([mod], 'v', lazy.group['scratchpad'].dropdown_toggle('vim')),
+])
 
 border_config = {
     'border_focus': 'cc0000',
