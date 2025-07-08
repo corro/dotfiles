@@ -141,7 +141,7 @@ groups.extend([
 ])
 keys.extend([
     Key([mod], 's', lazy.group['scratchpad'].dropdown_toggle('shell')),
-    Key([mod], 't', lazy.group['scratchpad'].dropdown_toggle('ranger')),
+    Key([mod], 'd', lazy.group['scratchpad'].dropdown_toggle('ranger')),
     Key([mod], 'v', lazy.group['scratchpad'].dropdown_toggle('vim')),
 ])
 
