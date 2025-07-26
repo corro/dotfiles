@@ -87,3 +87,9 @@ chpwd() {
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
+
+# Remove single quotes from ls output
+export QUOTING_STYLE=literal
+
+# Set SSH_AUTH_SOCK
+export SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh
