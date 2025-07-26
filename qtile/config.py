@@ -175,16 +175,18 @@ extension_defaults = widget_defaults.copy()
 
 bar = bar.Bar(
     [
-        widget.GroupBox(highlight_method='block', inactive='ffffff', disable_drag=True, fmt='{:.1}'),
+        widget.Image(filename='~/Graphics/Arch_Linux_Icon.svg', margin=4, mouse_callbacks={
+            'Button1': lazy.spawn(appmenu),
+        }),
+        widget.GroupBox(highlight_method='block', urgent_border='555555', inactive='ffffff', disable_drag=True, fmt='{:.1}'),
         widget.Sep(),
-        widget.TaskList(highlight_method='block', title_width_method='uniform', max_title_width=300, rounded=False),
+        widget.TaskList(highlight_method='block', title_width_method='uniform', max_title_width=300, rounded=False, urgent_border='215578'),
         # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
         # widget.StatusNotifier(),
-        widget.Systray(),
-        widget.BatteryIcon(),
-        widget.PulseVolume(emoji=True),
+        widget.Systray(icon_size=22),
+        widget.BatteryIcon(scale=1.2),
         widget.Clock(format='%a, %d.%m %H:%M'),
-        widget.TextBox('⏻', mouse_callbacks={
+        widget.TextBox('⏻', fontsize=32, mouse_callbacks={
             'Button1': lazy.spawn(powermenu),
         }),
     ],
