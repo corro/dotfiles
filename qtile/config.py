@@ -30,6 +30,22 @@ from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 
+
+class StaticTaskList(widget.TaskList):
+
+    def select_window(self):
+        if self.clicked:
+            current_win = self.bar.screen.group.current_window
+            window = self.clicked
+            if window is not current_win:
+                window.group.focus(window, False)
+                if window.floating:
+                    window.bring_to_front()
+            else:
+                # do not minimize window as the original class does
+                pass
+
+
 mod = 'mod1'
 terminal = 'kitty'
 wallpaper = '/usr/share/backgrounds/sr.solutions_wall.jpg'
@@ -180,7 +196,7 @@ bar = bar.Bar(
         }),
         widget.GroupBox(highlight_method='block', urgent_border='555555', inactive='ffffff', disable_drag=True, fmt='{:.1}'),
         widget.Sep(),
-        widget.TaskList(highlight_method='block', title_width_method='uniform', max_title_width=300, rounded=False, urgent_border='215578'),
+        StaticTaskList(highlight_method='block', title_width_method='uniform', max_title_width=300, rounded=False, urgent_border='215578'),
         # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
         # widget.StatusNotifier(),
         widget.Systray(icon_size=22),
