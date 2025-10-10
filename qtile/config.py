@@ -49,8 +49,8 @@ class StaticTaskList(widget.TaskList):
 mod = 'mod1'
 terminal = 'kitty'
 wallpaper = '/usr/share/backgrounds/sr.solutions_wall.jpg'
-appmenu = 'rofi -show drun -modi run,drun'
-powermenu = 'rofi -show power-menu -modi power-menu:rofi-power-menu'
+appmenu = 'rofi -show drun -modi run,drun -theme windows11'
+powermenu = 'rofi -show power-menu -modi "power-menu:rofi-power-menu --choices=lockscreen/logout/suspend/hibernate/shutdown/reboot" -theme windows11-powermenu'
 
 keys = [
     # A list of available commands that can be bound to keys can be found
