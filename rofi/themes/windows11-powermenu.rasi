@@ -1,0 +1,25 @@
+@import "windows11"
+
+window {
+  height: 300px;
+}
+
+mainbox {
+  children: [listview];
+}
+
+listview {
+  columns: 3;
+  lines:   2;
+  scrollbar: false;
+}
+
+element {
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     45px 10px;
+}
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
