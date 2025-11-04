@@ -161,13 +161,14 @@ keys.extend([
     Key([mod], 'v', lazy.group['scratchpad'].dropdown_toggle('vim')),
 ])
 
-border_config = {
+monad_config = {
+    'new_client_position': 'before_current',
     'border_focus': 'cc0000',
     'border_width': 4
 }
 layouts = [
-    layout.MonadTall(**border_config),
-    layout.MonadWide(**border_config),
+    layout.MonadTall(**monad_config),
+    layout.MonadWide(**monad_config),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
