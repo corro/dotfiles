@@ -3,6 +3,10 @@
     {
       "passKeys": "d j k n p s v",
       "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "f m c",
+      "pattern": "https?://www.youtube.com/*"
     }
   ],
   "hideUpdateNotifications": true,
