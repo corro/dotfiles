@@ -5,7 +5,7 @@
       "pattern": "https?://mail.google.com/*"
     },
     {
-      "passKeys": "f m c",
+      "passKeys": "m c",
       "pattern": "https?://www.youtube.com/*"
     }
   ],
